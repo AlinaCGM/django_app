@@ -1,0 +1,55 @@
+<!-- templates/index.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Add some styling to the collage container */
+        #collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Style for each image in the collage */
+        #collage img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>My Django App</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Django App!</h1>
+    </header>
+    
+    <main>
+        <p>This is a simple Django web app.</p>
+        <p>{{ content }}</p>
+
+        <!-- Collage container -->
+        <div id="collage">
+            <!-- Replace '1.jpg' to '6.jpg' with your actual image filenames -->
+            <img src="{% static 'images/1.jpg' %}" alt="Image 1">
+            <img src="{% static 'images/2.jpg' %}" alt="Image 2">
+            <img src="{% static 'images/3.jpg' %}" alt="Image 3">
+            <img src="{% static 'images/4.jpg' %}" alt="Image 4">
+            <img src="{% static 'images/5.jpg' %}" alt="Image 5">
+            <img src="{% static 'images/6.jpg' %}" alt="Image 6">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Django App</p>
+    </footer>
+</body>
+</html>
+
