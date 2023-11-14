@@ -15,5 +15,7 @@ def access_records(request):
     records = AccessRecord.objects.all()
     print(len(records))  # this line for debugging
     
-    return render(request, 'index.html', {'records': records})
+    return render(request, 'access_records.html', {'records': records})
+
+
 

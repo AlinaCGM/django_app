@@ -22,6 +22,6 @@ from django_app.views import access_records
 urlpatterns = [
     path('', views.index, name='index'),  
     path('admin/', admin.site.urls),
-    path('second-page/', views.second_page, name='second_page'),
-    path('access_records/', access_records, name='access_records'),
+    path('second_page/', views.second_page, name='second_page'),
+    path('access_records/', views.access_records, name='access_records'),  
 ]

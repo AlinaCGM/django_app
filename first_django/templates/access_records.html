@@ -24,7 +24,7 @@
             height: auto;
         }
     </style>
-    <title>My Django App</title>
+    <title>Access Records</title>
 </head>
 <body>
     <header>
@@ -37,22 +37,26 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <p>This is a simple Django web app.</p>
-        <p>{{ content }}</p>
-
   
-        <div id="collage">
-            <img src="{% static 'images/1.jpg' %}" alt="Image 1">
-            <img src="{% static 'images/2.jpg' %}" alt="Image 2">
-            <img src="{% static 'images/3.jpg' %}" alt="Image 3">
-            <img src="{% static 'images/4.jpg' %}" alt="Image 4">
-            <img src="{% static 'images/5.jpg' %}" alt="Image 5">
-            <img src="{% static 'images/6.jpg' %}" alt="Image 6">
-        </div>
-    </main>
-   
+    <h1>Access Records ({{ records|length }})</h1>
+    <table id="access-records">
+        <tr>
+            <th>Company Name</th>
+            <th>Date Accessed</th>
+        </tr>
+        {% if records %}
+            {% for record in records|slice:":18" %}
+                <tr>
+                    <td>{{ record.name.name }}</td>
+                    <td>{{ record.date }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="2">No records found</td>
+            </tr>
+        {% endif %}
+    </table>
     
     
     <footer>
@@ -60,4 +64,3 @@
     </footer>
 </body>
 </html>
-
