@@ -69,6 +69,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'first_django.wsgi.application'
 
 

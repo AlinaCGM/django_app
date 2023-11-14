@@ -1,6 +1,30 @@
+table#access-records {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table#access-records th,
+table#access-records td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table#access-records tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table#access-records th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #333;
+    color: white;
+}
+
 
 html, body {
-    height: 100%;
+    height: auto;
     margin: 0;
 }
 
@@ -11,14 +35,12 @@ html, body {
     margin-top: 20px;
 }
 
-
 #collage img {
     width: 100%;
     height: auto;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
-
 
 body {
     font-family: 'Arial', sans-serif;
@@ -52,9 +74,11 @@ footer {
     background-color: #333;
     color: white;
 }
+
 nav {
     background-color: none; 
 }
+
 ul {
     list-style-type: none; 
     padding: 0; 

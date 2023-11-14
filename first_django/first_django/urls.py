@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django_app import views
+from django_app.views import access_records 
 
 urlpatterns = [
-    path('', views.index, name='index'),  #
+    path('', views.index, name='index'),  
     path('admin/', admin.site.urls),
-     path('second-page/', views.second_page, name='second_page'),
+    path('second-page/', views.second_page, name='second_page'),
+    path('access_records/', access_records, name='access_records'),
 ]
