@@ -1,0 +1,51 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Second Page{% endblock %}</title>
+        <style>
+            body {
+                background-image: url('{% static "images/1.jpg" %}'); /* Adjust the path based on your directory structure */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the Second Page!</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'second_page' %}">Second Page</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Second Page</h2>
+            <p>This is the content of the second page.</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 My Django App</p>
+        </footer>
+    </body>
+    </html>
+{% endblock %}

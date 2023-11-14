@@ -52,3 +52,20 @@ footer {
     background-color: #333;
     color: white;
 }
+nav {
+    background-color: none; 
+}
+ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+li {
+    display: inline;
+    margin-right: 20px; 
+}
+
+a {
+    text-decoration: none; 
+    color: rgb(247, 242, 242);
+}

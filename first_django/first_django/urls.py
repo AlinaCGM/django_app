@@ -21,4 +21,5 @@ from django_app import views
 urlpatterns = [
     path('', views.index, name='index'),  #
     path('admin/', admin.site.urls),
+     path('second-page/', views.second_page, name='second_page'),
 ]
